@@ -26,6 +26,10 @@ ul li {
 	list-style: none;
 }
 
+button {
+	background-color: transparent;
+}
+
 h1,
 h2,
 h3,
