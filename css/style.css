@@ -8,10 +8,16 @@ body {
 	color: #fff;
 }
 
+@media (max-width: 767.98px) {
+	body {
+		font-size: 16px;
+	}
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	block-size: 100%;
+	min-height: 100%;
 	overflow: clip;
 }
 
@@ -25,9 +31,16 @@ body {
 	padding-inline: 15px;
 }
 
-/* ==================================== */
+/* ============================================================= */
 .header {
 	padding-block: 24px;
+	position: sticky;
+	top: 0;
+	z-index: 50;
+}
+
+.header__container {
+	max-inline-size: 1030px;
 }
 
 .header__body {
@@ -53,6 +66,10 @@ body {
 
 .header__link-logo:hover {
 	color: #aa51fe;
+}
+
+.menu__button {
+	display: none;
 }
 
 .menu__list {
@@ -228,7 +245,45 @@ body {
 }
 
 @media (max-width: 439.98px) {
+	.menu__list:not(:last-child) {
+		margin-bottom: 30px;
+	}
+
+	.menu__button {
+		display: flex;
+	}
+
+	.menu__button:not(:last-child) {
+		margin-bottom: 15px;
+	}
+
 	.actions-header__button {
 		display: none;
+	}
+}
+
+/* ============================================================= */
+
+.hero {
+	padding-top: 104px;
+}
+
+.hero__container {
+	text-align: center;
+}
+
+.hero__image {
+	max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+	.hero {
+		padding-top: 70px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.hero {
+		padding-top: 35px;
 	}
 }
