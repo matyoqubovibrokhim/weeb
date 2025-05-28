@@ -247,3 +247,32 @@
 		display: none;
 	}
 }
+
+/* =================== */
+
+.link-event {
+	background: url('../img/icons/arrow-purpule.svg') right no-repeat;
+	padding-right: 35px;
+	color: #9333ea;
+}
+
+.link-event span {
+	position: relative;
+	display: inline-block;
+	line-height: 1.2;
+}
+
+.link-event span::after {
+	content: '';
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	transition: width 0.5s;
+	left: 0;
+	bottom: 0;
+	background-color: #000;
+}
+
+.link-event:hover span::after {
+	width: 100%;
+}
